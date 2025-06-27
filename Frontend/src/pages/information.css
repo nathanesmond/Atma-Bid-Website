@@ -1,0 +1,59 @@
+.page-information .container-about {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    /* Added relative positioning */
+}
+
+.page-information .container-aboutCard {
+    width: 65%;
+    height: 75%;
+    background-color: transparent;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    /* Keeps it on top of the video */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centers the card horizontally */
+    border-radius: 8px;
+    border-color: rgba(255, 255, 255, 0.171);
+    border-width: 1px;
+    border-style: solid;
+    z-index: 10;
+    /* Ensures the card is above the video */
+}
+
+.page-information .image-about {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background: linear-gradient(to left, rgba(26, 26, 26, 0.5) 10%, rgba(0, 0, 0, 0) 90%), url("../images/car3.jpg") center / cover no-repeat;
+    z-index: 1;
+
+    /* Ensures the image stays behind the card */
+}
+
+.page-information .text-about {
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(26, 26, 26, 0.5);
+    backdrop-filter: blur(30px);
+    color: white;
+}
+
+.page-information .text-about h1 {
+    font-weight: bold;
+}
+
+.page-information .text-about p {
+    width: 100%;
+}

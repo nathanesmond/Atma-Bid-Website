@@ -1,0 +1,954 @@
+/* styles.module.css */
+.page-home * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+.page-home body {
+    background-color: #F5F6FA;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-home .container-main {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-home .linkz {
+    display: flex;
+    width: 30%;
+    height: 100%;
+}
+
+.page-home .linkz .button-nav {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10% 0 10%;
+    transition: all 0.3s ease;
+}
+
+.page-home .linkz .button-nav:hover {
+    background-color: rgb(56, 52, 52);
+    color: white;
+}
+
+.page-home .navlink {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.page-home .loginregis {
+    height: 100%;
+}
+
+.page-home .loginregis .button-nav {
+    background-color: white;
+    width: 110%;
+    height: 100%;
+    border-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.page-home .loginregis .button-nav:hover {
+    color: white;
+    background-color: rgb(56, 52, 52);
+}
+
+.page-home .loginlink {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+/* landing page */
+/* Landing page container */
+.page-home .container-landingP {
+    position: relative;
+    top: 0;
+    margin-top: 0px;
+    padding: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.page-home .backgroundLanding {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    position: absolute;
+    z-index: 0;
+}
+
+.page-home .container-landingP::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.page-home .TitleTextLanding {
+    margin-top: 13%;
+    color: white;
+    z-index: 2;
+    font-weight: bold;
+    font-size: 44px;
+    opacity: 1;
+    transition: all 0.6s ease;
+}
+
+@media (max-width: 768px) {
+
+    .page-home .container-landingP {
+        height: calc(100vh - 80px);
+    }
+
+    .page-home .TitleTextLanding {
+        font-size: 32px;
+        margin-top: 20%;
+    }
+
+    .page-home .backgroundLanding {
+        height: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .page-home .container-landingP {
+        height: calc(100vh - 60px);
+    }
+
+    .page-home .TitleTextLanding {
+        font-size: 24px;
+        margin-top: 25%;
+    }
+
+    .page-home .backgroundLanding {
+        height: 70%;
+    }
+}
+
+
+/* Search bar */
+.page-home .searchBar {
+    z-index: 2;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-home .search {
+    width: 650px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    z-index: 2;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 5%;
+    margin-bottom: 9%;
+    color: white;
+    font-weight: bold;
+    opacity: 1;
+    transition: all 0.6s ease;
+}
+
+.page-home .search-input {
+    font-size: 16px;
+    color: white;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-weight: 500;
+    flex: 1;
+    z-index: 2;
+}
+
+.page-home input[type="search"]::-webkit-search-decoration,
+.page-home input[type="search"]::-webkit-search-cancel-button,
+.page-home input[type="search"]::-webkit-search-results-button,
+.page-home input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.page-home .search-input::placeholder {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Container for the search bar and results */
+.search-bar-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for the search bar */
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 40px;
+    /* Adds space below the search bar */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    z-index: 3;
+}
+
+/* Container for search results */
+.page-home.search-results {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 4px;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 3;
+    padding: 10px;
+    max-height: 100px;
+    bottom: 330px;
+    overflow-y: scroll;
+    /* Enable scrolling */
+}
+
+/* Style for the scrollbar itself */
+.page-home.search-results::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
+    height: 8px;
+    /* Height for horizontal scrollbar */
+}
+
+/* Style for the scrollbar track (background) */
+.page-home.search-results::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    /* Dark background */
+    border-radius: 10px;
+}
+
+/* Style for the scrollbar thumb (the draggable part) */
+.page-home.search-results::-webkit-scrollbar-thumb {
+    background: #535353;
+    /* Green color for the thumb */
+    border-radius: 10px;
+    border: 2px solid #666666;
+    /* Slight border around the thumb */
+}
+
+/* Hover effect on the scrollbar thumb */
+.page-home.search-results::-webkit-scrollbar-thumb:hover {
+    background: #686868;
+    /* Darker green on hover */
+}
+
+/* Optional: Style for the scrollbar button (arrows, if any) */
+.page-home.search-results::-webkit-scrollbar-button {
+    display: none;
+    /* Hides the scrollbar buttons */
+}
+
+/* Firefox scrollbar styling (for users who use Firefox) */
+.page-home.search-results {
+    scrollbar-width: thin;
+    /* Set to 'auto', 'thin', or 'none' */
+    scrollbar-color: #858585 rgba(0, 0, 0, 0.2);
+    /* thumb and track color */
+}
+
+/* Individual search result item */
+.search-result-item {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+/* Link styling */
+.search-result-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Content inside search result */
+.search-result-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-result-name {
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+}
+
+/* Message when no results are found */
+.no-results {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .page-home .search {
+        width: 500px;
+        margin-top: 4%;
+        margin-bottom: 7%;
+    }
+
+    .page-home .search-input {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-home .search {
+        width: 100%;
+        margin-top: 3%;
+        margin-bottom: 6%;
+    }
+
+    .page-home .search-input {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page-home .search {
+        width: 100%;
+        margin-top: 2%;
+        margin-bottom: 5%;
+    }
+
+    .page-home .search-input {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+
+/* Buttons */
+
+/* Landing page button */
+.page-home .buttonLanding {
+    width: 20%;
+    height: 75px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    gap: 10%;
+    opacity: 1;
+    transition: all 0.6s ease;
+}
+
+/* Button styles */
+.page-home .btnA,
+.page-home .btnB {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    transition: all ease 0.3s;
+}
+
+.page-home .btnA {
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+}
+
+.page-home .btnA a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: color ease 0.3s;
+}
+
+.page-home .btnA:hover {
+    background-color: black;
+}
+
+.page-home .btnA:hover a {
+    color: white;
+}
+
+.page-home .btnB {
+    background-color: black;
+    border-style: solid;
+    border-color: white;
+}
+
+.page-home .btnB a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color ease 0.3s;
+}
+
+.page-home .btnB:hover {
+    background-color: white;
+}
+
+.page-home .btnB:hover a {
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+
+    .page-home .buttonLanding {
+        margin-top: 5%;
+        width: 30%;
+        height: 60px;
+        gap: 5%;
+        flex-direction: column;
+    }
+
+    .page-home .btnA,
+    .page-home .btnB {
+
+        height: 100%;
+    }
+
+    .page-home .btnA a,
+    .page-home .btnB a {
+        font-size: 14px;
+    }
+
+    .page-home .btnA,
+    .page-home .btnB {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .page-home .buttonLanding {
+        margin-top: 10%;
+
+        width: 60%;
+        height: 50px;
+    }
+
+    .page-home .btnA a,
+    .page-home .btnB a {
+        font-size: 12px;
+    }
+
+    .page-home .btnA,
+    .page-home .btnB {
+        padding: 8px 0;
+    }
+}
+
+
+
+/* Features Section */
+.page-home .container-featuredz {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.page-home .container-featuredz h1 {
+    margin-left: 5%;
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+
+.page-home .container-featuredz p {
+    font-weight: 700;
+    margin-left: 88%;
+}
+
+.page-home .container-cardz {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: start;
+    margin-left: 3%;
+    gap: 1%;
+}
+
+.page-home .content {
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-home .card {
+    width: 20%;
+    display: inline-block;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.page-home .card-text {
+    margin-bottom: 8px;
+}
+
+.page-home .text-card {
+    text-align: left;
+}
+
+.page-home .text-card span {
+    display: block;
+    margin-bottom: 0px;
+}
+
+.page-home .card-span-list {
+    font-size: 12px;
+    color: #6c757d;
+    text-decoration: underline;
+}
+
+.page-home .bid-price {
+    font-size: 18px;
+    color: #000;
+}
+
+.page-home .time-left {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 0px;
+}
+
+.page-home .bid-section .text-muted,
+.page-home .time-section .text-muted {
+    margin-bottom: 2px;
+}
+
+.page-home .custom-bid-btn {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.page-home .custom-bid-btn:hover {
+    background-color: rgb(78, 78, 78);
+    color: white;
+}
+
+.page-home .container-text-left {
+    width: 80%;
+}
+
+.page-home .containerCard {
+    display: inline-block;
+}
+
+.page-home .containerCard::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.page-home .containerCard::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.page-home .containerCard::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.page-home .containerCard::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.page-home .containerCard {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.4) transparent;
+}
+
+/* carousel */
+.page-home .container-carouselz {
+    margin-top: 3%;
+    height: 100%;
+}
+
+.page-home .carousel-header-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-home .carousel-header {
+    width: 80%;
+    margin-bottom: 1%;
+}
+
+.page-home .carousel-header h1 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.page-home .carousel-item {
+    height: 52rem;
+    background: #777;
+    color: white;
+    position: relative;
+    background-position: center;
+    background-size: center;
+}
+
+.page-home .overlay-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.4);
+}
+
+.page-home .overlay-image.A {
+    background-position: center;
+}
+
+.page-home .overlay-image.B {
+    background-position: center;
+}
+
+.page-home .overlay-image.C {
+    background-position: 0% 60%;
+}
+
+.page-home .container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 120px;
+}
+
+.page-home .carousel-indicators li {
+    list-style: none;
+}
+
+/* How to Bid */
+.page-home .timeline-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    opacity: 1;
+    transition: all 0.6s ease;
+}
+
+.page-home .timeline-header.inView {
+    opacity: 1;
+}
+
+.page-home .timeline-header h1 {
+    font-weight: bolder;
+    font-size: 48px;
+}
+
+
+.page-home .timeline {
+    position: relative;
+    max-width: 100%;
+    background: #F5F6FA;
+    margin: 0% 0% 10% 0%;
+    padding: 10% 0%;
+}
+
+.page-home .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: black;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 2;
+}
+
+.page-home .textBox {
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: all 0.6s ease;
+    z-index: 11;
+    opacity: 1;
+    transition: all 0.6s ease;
+}
+
+.page-home .textBox.inView {
+    opacity: 1;
+}
+
+.page-home .textBox:hover {
+    transform: scale(1.1) translateX(5%);
+    cursor: default;
+}
+
+.page-home .textBox.A {
+    text-align: right;
+}
+
+.page-home .textBox.A:hover {
+    transform: scale(1.1) translateX(-5%);
+    cursor: default;
+}
+
+.page-home .container-howToBid {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    background-color: #F5F6FA;
+}
+
+.page-home .left {
+    left: -0%;
+}
+
+.page-home .right {
+    left: 50%;
+}
+
+.page-home .Number-container {
+    position: absolute;
+    width: 40px;
+    right: -19px;
+    top: 32px;
+    z-index: 10;
+}
+
+.page-home .Number-container.right {
+    left: -21px;
+}
+
+.page-home .Number {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.page-home .Number h2 {
+    font-weight: bold;
+    color: white;
+    font-size: 18;
+    margin: 0;
+    padding: 0;
+}
+
+.page-home .leftArrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 2;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid white;
+    right: -15px;
+}
+
+.page-home .rightArrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 2;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid white;
+    left: -15px;
+}
+
+/* About Us */
+.page-home .container-about {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.page-home .container-aboutCard {
+    width: 65%;
+    height: 75%;
+    background-color: transparent;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 8px;
+    border-color: rgba(255, 255, 255, 0.171);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.page-home .image-about {
+    width: 60%;
+    background-size: cover;
+    background: linear-gradient(to left, rgba(26, 26, 26, 0.5) 10%, rgba(0, 0, 0, 0) 90%), url("../images/car3.jpg") center / cover no-repeat;
+}
+
+.page-home .text-about {
+    padding: 40px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(26, 26, 26, 0.5);
+    backdrop-filter: blur(30px);
+    color: white;
+}
+
+.page-home .text-about h1 {
+    font-weight: bold;
+}
+
+.page-home .text-about p {
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 13%;
+}
+
+.page-home .aboutButton {
+    width: fit-content;
+    border-radius: 4px;
+    font-weight: thin;
+}
+
+@media (max-width: 1200px) {
+    .page-home .container-aboutCard {
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .page-home .image-about {
+        width: 100%;
+        height: 200px;
+    }
+
+    .page-home .text-about {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-home .container-aboutCard {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .page-home .image-about {
+        width: 100%;
+        height: 200px;
+    }
+
+    .page-home .text-about {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .page-home .text-about p {
+        margin-bottom: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-home .container-aboutCard {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .page-home .image-about {
+        width: 100%;
+        height: 150px;
+    }
+
+    .page-home .text-about {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .page-home .text-about p {
+        margin-bottom: 5%;
+    }
+}
