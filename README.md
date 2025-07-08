@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/46acb35d-cd9f-4552-802d-e1cdfceb9493
 ![Screenshot 2025-07-08 204705](https://github.com/user-attachments/assets/2a52639e-d1ff-4427-a9b5-83af192c6fea)
 
 
-Developed By:
+**Developed By**:
 - Nathanael Esmond Hartono
 - Stanyslaus Hary Muntoro
 - Kevin Philips Tanamas
