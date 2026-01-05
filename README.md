@@ -7,13 +7,13 @@ AtmaBid is a modern car auction website that connects sellers and buyers in a se
 - **Backend**: Laravel (REST API), MySQL
 
 
-## ✨ Features
+## Features
 
-- 🔐 User authentication & registration
-- 🚘 Browse and search for listed cars
-- 🛠️ Seller dashboard to list and manage cars
-- 💸 Real-time bidding system
-- 📊 Auction timer and bid history
+-  User authentication & registration
+-  Browse and search for listed cars
+-  Seller dashboard to list and manage cars
+-  Real-time bidding system
+-  Auction timer and bid history
 
 
 
